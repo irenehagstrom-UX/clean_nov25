@@ -876,7 +876,7 @@ const InteractiveChatbot = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="w-full lg:flex-1 bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 p-4 overflow-y-auto max-h-[300px] lg:max-h-none"
+          className="w-full lg:w-[45%] bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 p-4 overflow-y-auto max-h-[300px] lg:max-h-none"
         >
           <h3 className="text-sm font-semibold text-gray-100 mb-3">
             Related Images
