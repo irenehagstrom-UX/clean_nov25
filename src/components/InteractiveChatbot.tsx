@@ -1002,9 +1002,9 @@ const InteractiveChatbot = () => {
     >
       {/* Chat Section */}
       <motion.div
-        className="flex flex-col bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 overflow-hidden"
+        className="flex flex-col bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 overflow-hidden w-full lg:w-auto"
         animate={{
-          width: isExpanded ? "55%" : "100%",
+          width: isExpanded ? { lg: "55%" } : "100%",
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
