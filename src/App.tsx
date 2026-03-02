@@ -17,6 +17,23 @@ function App() {
   // Sample data for portfolio items
   const experienceProjects = [
     {
+      id: "8",
+      title: "Design Manager",
+      image: "/images/PR_pm_thumb.png",
+      additionalImages: ["/images/PR-PM_workshop.jpg"],
+      tags: [
+        "UX Strategy",
+        "Design Leadership",
+        "Team Management",
+        "Cross-Functional Collaboration",
+      ],
+      description:
+        "Leading the strategic and operational execution of design initiatives, aligning user experience, brand, and business goals. Mentoring Designers, driving cross-functional collaboration, and ensuring scalable design outcomes across products and services.",
+      experience:
+        "I lead a team of designers delivering highly usable, technically robust interfaces for a SaaS platform focused on managed databases. I drive UX strategy and partner closely with product managers and engineers to ensure scalable, high-quality releases. My role balances hands-on product design with team mentorship, design operations, and cross-functional alignment to improve developer experience and enterprise usability.",
+      year: "2025 - current, Berlin, Aiven",
+    },
+    {
       id: "1",
       title: "Senior Product & UX Designer",
       image:
@@ -126,29 +143,6 @@ function App() {
       year: "2008-2010, Sydney Australia",
     },
     {
-      id: "8",
-      title: "Product Manager and Facilitator",
-      image: "/images/PR_pm_thumb.png",
-      additionalImages: [
-        "/images/PR-PM_workshop.jpg",
-        "/images/PR-aiven_workshop.jpg",
-      ],
-      tags: [
-        "Facilitator",
-        "Workshop led",
-        "Stakeholder engager",
-        "Presenter",
-        "Product Manager",
-      ],
-      description:
-        "Strategic communication and stakeholder engagement. Driving project success through transparent collaboration, workshop facilitation, and storytelling that aligns teams and delivers results.",
-      experience:
-        "I take ownership of my projects and actively engage stakeholders to ensure key goals and requirements aren't missed. Through needs and goals workshops, ideation workshops and regular updates, sharing progress, prototypes, and test results. I promote transparency and shared ownership, helping identify pain points, needs, risks, and constraints for greater project success.",
-      year: "always",
-      outcomes:
-        "97% of projects I have been involved in have been successfully implemented.",
-    },
-    {
       id: "7",
       title: "Project Manager",
       image:
@@ -166,9 +160,9 @@ function App() {
         "Standards Development",
       ],
       description:
-        "Project management and stakeholder coordination. Orchestrating multi-stakeholder initiatives, process improvement, and international collaboration in standards development.",
+        "Project management and stakeholder coordination. Orchestrating multi-stakeholder initiatives. Driving project success through transparent collaboration, workshop facilitation, and storytelling that aligns teams and delivers results.",
       experience:
-        "At Standards Australia, I coordinated national and international meetings and ISO plenary sessions, introduced new improved business workflows, and facilitated standards committee collaborations for the establishment of internaional ISO standards, in the field of MPEG4, accessibility, user interfaces and e-learning.",
+        "I take ownership of my projects and actively engage stakeholders to ensure key goals and requirements aren't missed. Through needs and goals workshops, ideation workshops and regular updates, sharing progress, prototypes, and test results. I promote transparency and shared ownership, helping identify pain points, needs, risks, and constraints for greater project success. At Standards Australia, facilitated standards committee collaborations for the establishment of internaional ISO standards, in the field of MPEG4, accessibility, user interfaces and e-learning.",
       year: "2004-2006, Sydney, Standards Australia",
     },
   ];
@@ -211,12 +205,11 @@ function App() {
       title: "Branding & Visual Design",
       image: "/images/PD_branding_thumb.png",
       additionalImages: [
-        "/images/web-2015-Lead.gif",
+        "/images/webhistory/web-2017-legalito.gif",
         "/images/8cl_werbung2.jpg",
         "/images/logos.png",
-        "/images/web-2004-gekolia.gif",
+        "/images/webhistory/web-2004-gekolia.png",
         "/images/PD_brand_logos.png",
-        "/images/lkzwo karten.jpg",
       ],
       tags: [
         "Branding",
@@ -303,6 +296,8 @@ function App() {
         "/images/PD-learncoachies_book.png",
         "/images/PD-learncoachies-screen.png",
         "/images/PD_learncoachies_func_specs.png",
+        "/images/PD-Keks-student view.png",
+        "/images/PD-Keks-results.png",
       ],
       tags: [
         "EdTech",
@@ -312,15 +307,15 @@ function App() {
         "Design Manager",
       ],
       description:
-        "An e-learning solution developed to complement Cornelsen's textbooks, offering interactive digital learning paths aligned with classroom curricula and enhancing both student engagement and teaching support.",
+        "Design of a digital evaluation tool enabling teachers to assess students' skills, and design of e-learning solution complementing Cornelsen's textbooks, offering interactive digital learning paths aligned with classroom curricula.",
       modalContent: {
         overview:
-          "This project focused on designing e-learning solutions tightly integrated with Cornelsen's textbook offerings to provide digital learning paths aligned with classroom curricula.",
+          "Design of an student skill evaluation tool and an e-learning solution tightly integrated with Cornelsen's textbook offerings, to provide digital learning paths aligned with classroom curricula.",
         process:
-          "Managed cross-departmental projects, collaborating with stakeholders from diverse educational disciplines to define unified functional specifications. Partnered with graphic designers, software engineers, and Product Owners to ensure design consistency across all fields.",
+          "Managed cross-departmental projects, collaborating with stakeholders from diverse educational disciplines to define unified functional specifications. Partnered with graphic designers, software engineers, and Product Owners to ensure design consistency across all fields. Ran on-site usability testing sessions with teachers.",
         outcomes:
-          "The online solution provided an alternative to the CD-ROMs bundled with textbooks, allowing students to enhance their skills through interactive e-learning modules aligned with their school books. This increased student engagement and gave teachers digital content to support their lesson plans. Launched in 2012, it marked Cornelsen's first step toward digital learning.",
-        year: "2012, Berlin - Cornelsen",
+          "The e-learning tool allowed students to enhance their skills through interactive e-learning modules aligned with their school books, increasing student engagement. Launched in 2012, it marked Cornelsen's first step toward digital learning. From paper-based testing and analysis to an online scoring tool allowing teachers to better assess their students skills and generate actionable insights.",
+        year: "2012-2013, Berlin - Cornelsen",
       },
     },
     {
@@ -347,47 +342,24 @@ function App() {
       },
     },
     {
-      id: "6",
-      title: "EdTech Evaluation Tool Design",
-      image: "/images/PD_keks_thumb.png",
-      additionalImages: [
-        "/images/PD-Keks-portal.png",
-        "/images/PD-Keks-student view.png",
-        "/images/PD-Keks-results.png",
-      ],
-      tags: [
-        "UX design",
-        "Evaluation tools",
-        "Education",
-        "Data visualization",
-      ],
-      description:
-        "A digital evaluation tool designed to help teachers assess student skills more efficiently, turning paper-based assessments into actionable, online insights.",
-      modalContent: {
-        overview:
-          "This project involved the design of a digital evaluation tool enabling teachers to assess students' skills in key curriculum topics. The goal was to simplify skill-based assessments and generate actionable insights.",
-        process:
-          "Conducted needs analysis workshops with educators, mapped evaluation flows, and designed a scoring system. Delivered wireframes and prototypes and ran on-site usability testing sessions with teachers.",
-        outcomes:
-          "From paper-based testing and analysis to an online scoring tool for e-learning platforms.",
-        year: "2013, Berlin - Cornelsen",
-      },
-    },
-    {
       id: "7",
       title: "Industrial Design",
-      image: "/images/PD_industrial design.jpg",
+      image: "/images/Reekosketch_thumbnail.png",
       additionalImages: [
         "/images/PD_industrial_reeko.jpg",
         "/images/PD_industrial_D.png",
         "/images/PD_industrial_C.png",
         "/images/PD_industrial_B.png",
         "/images/PD_industrial_A.png",
-        "/images/PD_industrial_2.jpg",
       ],
-      tags: ["Industrial design", "Sustainable design", "Industrial", "Product design"],
+      tags: [
+        "Industrial design",
+        "Sustainable design",
+        "Industrial",
+        "Product design",
+      ],
       description:
-        "This project explores the design of sustainable recycling bins for public spaces, with a focus on combining functionality, cost-efficiency, and visual appeal. Inspired by natural forms, the result is a modular solution that balances smart design with environmental responsibility.",
+        "Design of sustainable recycling bins for public spaces, prioritizing functional clarity, cost efficiency, and cohesive urban integration. Inspired by natur the result is a modular solution that balances smart design with environmental responsibility.",
       modalContent: {
         overview:
           "My thesis project in 1999 involved creating sustainable recycling bins for public spaces. The wood production company's requirements was to design a sustainable and cost-efficient product. From a design perspective the aim was to design a smart, usable and visually appealing product.",
@@ -487,16 +459,16 @@ function App() {
           <>
             <Routes>
               {/* Home Page */}
-              <Route 
-                path="/" 
+              <Route
+                path="/"
                 element={
-                  <Home 
+                  <Home
                     animationSpeed={animationSpeed}
                     movementIntensity={movementIntensity}
                     onSpeedChange={setAnimationSpeed}
                     onIntensityChange={setMovementIntensity}
                   />
-                } 
+                }
               />
               <Route path="/about-me" element={<AboutMe />} />
               <Route path="/archive" element={<Archive />} />
@@ -535,7 +507,7 @@ function App() {
           <footer className="py-6">
             <div className="container mx-auto px-4 text-center">
               <p className="text-gray-400 text-xs mt-3">
-                © 2025 Irene Hagström Portfolio. All rights reserved.
+                © 2026 Irene Hagström Portfolio. All rights reserved.
               </p>
               <div className="flex justify-center items-center gap-4 mt-4">
                 <a
@@ -566,7 +538,6 @@ function App() {
             </div>
           </footer>
         )}
-
       </div>
 
       {/* Floating Chatbot - Hidden on home page */}

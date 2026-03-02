@@ -34,3 +34,4 @@ core
 
 # Netlify
 .netlify
+**/tempobook/**

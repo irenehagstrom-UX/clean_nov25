@@ -14,7 +14,7 @@ interface HeroProps {
 
 const Hero = ({
   name = "Irene Hagström",
-  headline = "UX Strategist & Product Designer",
+  headline = "UX Strategist & Design Leader",
   description = "Product Design professional with a background in business analysis and process optimization, ensuring that design decisions not only enhance usability but also drive business efficiency.",
   onExperienceClick = () => console.log("Experience clicked"),
   onDisciplineClick = () => console.log("Discipline clicked"),

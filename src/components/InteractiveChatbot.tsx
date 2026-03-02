@@ -230,7 +230,7 @@ const InteractiveChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi! I'm Irene. I'm a UX Strategist & Product Designer with 20+ years of experience. Feel free to ask me about my work, design approach, specific projects, or how I can help your team. I'm here to share my story and expertise with you!",
+      text: "Hi! I'm Irene. I'm a UX Strategist & Design Leader with 20+ years of experience. Feel free to ask me about my work, design approach, specific projects, or how I can help your team. I'm here to share my story and expertise with you!",
       sender: "bot",
       timestamp: new Date(),
     },

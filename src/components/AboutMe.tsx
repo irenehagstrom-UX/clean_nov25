@@ -123,7 +123,7 @@ const AboutMe = () => {
                   </span>
                 </div>
                 <p className="text-lg text-gray-600 font-light">
-                  Issue #01 • Winter 2025
+                  Issue #02 • Spring 2026
                 </p>
               </motion.div>
             </div>
@@ -563,7 +563,7 @@ const AboutMe = () => {
             className="flex border-t border-gray-900 justify-between items-center h-[130] mt-8 pt-5 pb-5 py-3 py-5 mb-0"
           >
             <div className="text-xs text-gray-500 uppercase tracking-widest">
-              Design Quarterly • Issue #01 • Winter 2025
+              Design Quarterly • Issue #02 • Spring 2026
             </div>
             <div className="text-xs text-gray-500">
               Published by Irene Hagström
