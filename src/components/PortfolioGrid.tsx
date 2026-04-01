@@ -256,23 +256,24 @@ const PortfolioGrid = ({
                   {/* Image Slider */}
                   {selectedProject.additionalImages &&
                     selectedProject.additionalImages.length > 0 && (
-                      <div className="mt-8">
-                        <Carousel className="w-full max-w-2xl mx-auto">
+                      <div className="mt-8 px-8">
+                        <Carousel className="w-full mx-auto">
                           <CarouselContent>
                             {selectedProject.additionalImages.map(
                               (imageUrl, index) => (
                                 <CarouselItem
                                   key={index}
-                                  className="md:basis-1/2 pl-6"
+                                  className="basis-full"
                                 >
                                   <div className="p-2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-md border border-gray-400">
+                                    <div className="overflow-hidden rounded-md border border-gray-400">
                                       <img
                                         src={imageUrl}
                                         alt={`${selectedProject.title} - Image ${index + 1}`}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-auto"
                                       />
                                     </div>
+                                    <p className="text-center text-gray-400 text-sm mt-2">{index + 1} / {selectedProject.additionalImages!.length}</p>
                                   </div>
                                 </CarouselItem>
                               ),
