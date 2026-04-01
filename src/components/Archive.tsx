@@ -163,8 +163,8 @@ const Archive = () => {
 
   return (
     <div className="container mx-auto px-4 pb-20">
-      {/* White Content Frame */}
-      <div className="bg-black rounded-lg shadow-2xl max-w-5xl mx-auto overflow-y-auto">
+      {/* Content Frame */}
+      <div className="bg-[hsl(var(--surface-1))] rounded-lg shadow-2xl max-w-5xl mx-auto overflow-y-auto">
         <div className="px-6 pt-12 pb-12">
           {/* Header */}
           <motion.div
@@ -173,18 +173,18 @@ const Archive = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[hsl(340,30%,80%)]">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[hsl(var(--text-primary))]">
               Let's go back in time
             </h1>
 
             {/* View Toggle */}
-            <div className="inline-flex bg-[#1a1a1a] rounded-full p-1 gap-1">
+            <div className="inline-flex bg-[hsl(var(--surface-3))] rounded-full p-1 gap-1">
               <button
                 onClick={() => setActiveView("portfolio")}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   activeView === "portfolio"
                     ? "bg-[#7bd1de] text-black font-semibold"
-                    : "text-gray-300 hover:text-white"
+                    : "text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))]"
                 }`}
               >
                 Portfolio timeline
@@ -194,7 +194,7 @@ const Archive = () => {
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   activeView === "webdesign"
                     ? "bg-[#7bd1de] text-black font-semibold"
-                    : "text-gray-300 hover:text-white"
+                    : "text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))]"
                 }`}
               >
                 Web design work
@@ -202,7 +202,7 @@ const Archive = () => {
             </div>
 
             {/* View-specific descriptions */}
-            <p className="text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
+            <p className="text-[hsl(var(--text-secondary))] max-w-3xl mx-auto mt-6 leading-relaxed">
               {activeView === "portfolio"
                 ? "Scroll down to explore how this and previous portfolios have evolved over time, all the way back to 1998!"
                 : "See how web design has evolved throughout the years. Here some of my web design work."}
@@ -214,11 +214,11 @@ const Archive = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16 sticky top-4 z-10 bg-black/90 backdrop-blur-sm py-6 rounded-lg"
+            className="mb-16 sticky top-4 z-10 bg-[hsl(var(--surface-1))]/90 backdrop-blur-sm py-6 rounded-lg"
           >
             <div className="relative max-w-4xl mx-auto px-8">
               {/* Horizontal Line */}
-              <div className="absolute top-1/2 left-8 right-8 h-0.5 bg-gray-600 -translate-y-1/2" />
+              <div className="absolute top-1/2 left-8 right-8 h-0.5 bg-[hsl(var(--border))] -translate-y-1/2" />
 
               {/* Year Buttons */}
               <div className="relative flex justify-between items-center">
@@ -229,10 +229,10 @@ const Archive = () => {
                     className="group relative flex flex-col items-center"
                   >
                     {/* Circle Button */}
-                    <div className="w-4 h-4 rounded-full bg-gray-600 border-2 border-gray-400 transition-all duration-300 group-hover:bg-[#7bd1de] group-hover:border-[#7bd1de] group-hover:scale-125 cursor-pointer" />
+                    <div className="w-4 h-4 rounded-full bg-[hsl(var(--surface-3))] border-2 border-[hsl(var(--border))] transition-all duration-300 group-hover:bg-[#7bd1de] group-hover:border-[#7bd1de] group-hover:scale-125 cursor-pointer" />
 
                     {/* Year Label */}
-                    <span className="absolute -bottom-8 text-xs text-gray-400 group-hover:text-[#7bd1de] transition-colors duration-300 whitespace-nowrap">
+                    <span className="absolute -bottom-8 text-xs text-[hsl(var(--text-secondary))] group-hover:text-[#7bd1de] transition-colors duration-300 whitespace-nowrap">
                       {year}
                     </span>
                   </button>
@@ -255,12 +255,12 @@ const Archive = () => {
                   className="relative scroll-mt-32"
                 >
                   {/* Content Card - Scaled down 15% */}
-                  <div className="bg-[#2a2a2a] border border-gray-400 rounded-lg overflow-hidden max-w-[85%] mx-auto">
-                    <div className="p-4 bg-[#2a2a2a]">
-                      <h3 className="text-lg font-semibold text-white">
+                  <div className="bg-[hsl(var(--surface-2))] border border-[hsl(var(--border))] rounded-lg overflow-hidden max-w-[85%] mx-auto">
+                    <div className="p-4 bg-[hsl(var(--surface-2))]">
+                      <h3 className="text-lg font-semibold text-[hsl(var(--text-primary))]">
                         {item.date}
                       </h3>
-                      <p className="text-gray-300 mt-1">{item.title}</p>
+                      <p className="text-[hsl(var(--text-secondary))] mt-1">{item.title}</p>
                     </div>
                     <div className="p-6">
                       <div className="bg-white rounded-lg overflow-hidden shadow-lg border-4 border-gray-400">

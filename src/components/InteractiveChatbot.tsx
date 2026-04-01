@@ -805,7 +805,7 @@ const InteractiveChatbot = () => {
     >
       {/* Chat Section */}
       <motion.div
-        className="flex flex-col bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 overflow-hidden"
+        className="flex flex-col bg-[hsl(var(--surface-3))] backdrop-blur-sm rounded-lg border border-[hsl(var(--border))] overflow-hidden"
         animate={{
           width: isExpanded ? "55%" : "100%",
         }}
@@ -834,8 +834,8 @@ const InteractiveChatbot = () => {
                 <div
                   className={`max-w-[75%] rounded-2xl px-4 py-3 ${
                     message.sender === "user"
-                      ? "bg-[#F4C56D] text-gray-900"
-                      : "bg-[#4a4a4a] text-gray-100 border border-gray-600"
+                      ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
+                      : "bg-[hsl(var(--surface-2))] text-[hsl(var(--text-primary))] border border-[hsl(var(--border))]"
                   }`}
                 >
                   <p className="text-sm leading-relaxed">{message.text}</p>
@@ -847,23 +847,23 @@ const InteractiveChatbot = () => {
         </div>
 
         {/* Input */}
-        <div className="border-t border-gray-600 p-4 bg-[#3a3a3a]">
+        <div className="border-t border-[hsl(var(--border))] p-4 bg-[hsl(var(--surface-2))]">
           <form onSubmit={handleSubmit} className="flex gap-2">
             <Input
               placeholder="Ask me a question"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="flex-1 bg-[#2a2a2a] text-gray-100 placeholder:text-gray-400 border-gray-600"
+              className="flex-1 bg-[hsl(var(--surface-1))] text-[hsl(var(--text-primary))] placeholder:text-[hsl(var(--text-muted))] border-[hsl(var(--border))]"
             />
             <Button
               type="submit"
               size="icon"
-              className="bg-[#7bd1de] hover:bg-[#6bc1ce]"
+              className="bg-[hsl(var(--secondary))] hover:bg-[hsl(var(--secondary))]/90"
             >
               <Send className="w-4 h-4" />
             </Button>
           </form>
-          <p className="text-[10px] text-gray-400 mt-2 italic">
+          <p className="text-[10px] text-[hsl(var(--text-muted))] mt-2 italic">
             Disclaimer: This chatbot is limited to the content displayed on this
             website, and including other materials such as resumes, LinkedIN
             profile and some personal stories.
@@ -876,9 +876,9 @@ const InteractiveChatbot = () => {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="w-full lg:w-[45%] bg-[#3a3a3a] backdrop-blur-sm rounded-lg border border-gray-600 p-4 overflow-y-auto max-h-[300px] lg:max-h-none"
+          className="w-full lg:w-[45%] bg-[hsl(var(--surface-2))] backdrop-blur-sm rounded-lg border border-[hsl(var(--border))] p-4 overflow-y-auto max-h-[300px] lg:max-h-none"
         >
-          <h3 className="text-sm font-semibold text-gray-100 mb-3">
+          <h3 className="text-sm font-semibold text-[hsl(var(--text-primary))] mb-3">
             Related Images
           </h3>
           <div className="space-y-3">
@@ -887,7 +887,7 @@ const InteractiveChatbot = () => {
                 key={index}
                 src={img}
                 alt={`Related content ${index + 1}`}
-                className="w-full rounded-lg border border-gray-600"
+                className="w-full rounded-lg border border-[hsl(var(--border))]"
               />
             ))}
           </div>

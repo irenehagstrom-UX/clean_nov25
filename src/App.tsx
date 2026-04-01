@@ -1,6 +1,7 @@
 import { Suspense, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { Mail, Linkedin, Download } from "lucide-react";
+import { Mail, Linkedin, Download, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/lib/useTheme";
 import Home from "./components/home";
 import AboutMe from "./components/AboutMe";
 import PortfolioGrid from "./components/PortfolioGrid";
@@ -13,6 +14,7 @@ function App() {
   const location = useLocation();
   const [animationSpeed, setAnimationSpeed] = useState(10);
   const [movementIntensity, setMovementIntensity] = useState(10);
+  const { theme, toggleTheme } = useTheme();
 
   // Sample data for portfolio items
   const experienceProjects = [
@@ -397,7 +399,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen relative bg-black">
+    <div className="min-h-screen relative bg-[hsl(var(--background))]">
       {/* Animated Floral Background */}
       <AnimatedFloralBackground
         animationSpeed={animationSpeed / 100}
@@ -409,13 +411,13 @@ function App() {
       <div className="relative z-10 min-h-screen overflow-y-auto">
         {/* Navigation */}
         <header className="container mx-auto px-4 py-6">
-          <nav className="flex justify-end items-center">
+          <nav className="flex justify-end items-center gap-6">
             {/* Main Navigation */}
             <ul className="flex space-x-6 h-[30px]">
               <li>
                 <button
                   onClick={() => navigate("/")}
-                  className="text-gray-200 hover:text-primary transition-colors font-satoshi"
+          className="text-[hsl(var(--text-secondary))] hover:text-primary transition-colors font-satoshi"
                 >
                   Home
                 </button>
@@ -423,7 +425,7 @@ function App() {
               <li>
                 <button
                   onClick={() => navigate("/roles")}
-                  className="text-gray-200 hover:text-primary transition-colors font-satoshi"
+          className="text-[hsl(var(--text-secondary))] hover:text-primary transition-colors font-satoshi"
                 >
                   Roles
                 </button>
@@ -431,7 +433,7 @@ function App() {
               <li>
                 <button
                   onClick={() => navigate("/discipline")}
-                  className="text-gray-200 hover:text-primary transition-colors font-satoshi"
+          className="text-[hsl(var(--text-secondary))] hover:text-primary transition-colors font-satoshi"
                 >
                   Discipline
                 </button>
@@ -439,7 +441,7 @@ function App() {
               <li>
                 <button
                   onClick={() => navigate("/about-me")}
-                  className="text-gray-200 hover:text-primary transition-colors font-satoshi"
+          className="text-[hsl(var(--text-secondary))] hover:text-primary transition-colors font-satoshi"
                 >
                   About
                 </button>
@@ -447,12 +449,25 @@ function App() {
               <li>
                 <button
                   onClick={() => navigate("/archive")}
-                  className="text-gray-200 hover:text-primary transition-colors font-satoshi"
+          className="text-[hsl(var(--text-secondary))] hover:text-primary transition-colors font-satoshi"
                 >
                   Archive
                 </button>
               </li>
             </ul>
+
+            {/* Dark / Light mode toggle */}
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle dark/light mode"
+              className="w-8 h-8 flex items-center justify-center rounded-full text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--primary))] hover:bg-[hsl(var(--surface-2))] transition-all duration-200"
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4 h-4" />
+              ) : (
+                <Moon className="w-4 h-4" />
+              )}
+            </button>
           </nav>
         </header>
 
@@ -507,13 +522,13 @@ function App() {
         {location.pathname !== "/" && (
           <footer className="py-6">
             <div className="container mx-auto px-4 text-center">
-              <p className="text-gray-400 text-xs mt-3">
+              <p className="text-[hsl(var(--text-muted))] text-xs mt-3">
                 © 2026 Irene Hagström Portfolio. All rights reserved.
               </p>
               <div className="flex justify-center items-center gap-4 mt-4">
                 <a
                   href="mailto:irene.hagstrom@gmail.com"
-                  className="text-gray-400 hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
+                  className="text-[hsl(var(--text-muted))] hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
                 >
                   <Mail className="w-3 h-3" />
                   Email me
@@ -522,7 +537,7 @@ function App() {
                   href="https://www.linkedin.com/in/irene-hagström"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
+                  className="text-[hsl(var(--text-muted))] hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
                 >
                   <Linkedin className="w-3 h-3" />
                   LinkedIn profile
@@ -530,7 +545,7 @@ function App() {
                 <a
                   href="/Irene_Hagstrom_Profile.pdf"
                   download="Irene_Hagstrom_Profile.pdf"
-                  className="text-gray-400 hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
+                  className="text-[hsl(var(--text-muted))] hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
                 >
                   <Download className="w-3 h-3" />
                   Download Resume

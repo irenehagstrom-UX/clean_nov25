@@ -60,13 +60,13 @@ const PortfolioGrid = ({
   };
 
   return (
-    <div className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-[#1a1a1a]/70 backdrop-blur-sm">
+    <div className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-[hsl(var(--surface-1))]/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-light text-gray-100 mb-4 font-satoshi">
+          <h2 className="text-3xl font-light text-[hsl(var(--text-primary))] mb-4 font-satoshi">
             {title}
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-[hsl(var(--text-secondary))] max-w-3xl mx-auto">
             {description}
           </p>
         </div>
@@ -80,7 +80,7 @@ const PortfolioGrid = ({
               className="cursor-pointer"
               onClick={() => handleProjectClick(project)}
             >
-              <Card className="h-full overflow-hidden border-4 border-border hover:shadow-lg transition-shadow duration-300 bg-[#2a2a2a]">
+              <Card className="h-full overflow-hidden border-4 border-border hover:shadow-lg transition-shadow duration-300 bg-[hsl(var(--surface-2))]">
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={project.image}
@@ -89,10 +89,10 @@ const PortfolioGrid = ({
                   />
                 </div>
                 <CardContent className="p-5">
-                  <h3 className="text-xl font-light mb-2 font-satoshi text-gray-100">
+                  <h3 className="text-xl font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4">
+                  <p className="text-[hsl(var(--text-muted))] text-sm mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -100,7 +100,7 @@ const PortfolioGrid = ({
                       <Badge
                         key={index}
                         variant="secondary"
-                        className="bg-[#3a3a3a] text-gray-300 hover:bg-[#3a3a3a] cursor-default"
+                        className="bg-[hsl(var(--surface-3))] text-[hsl(var(--text-secondary))] hover:bg-[hsl(var(--surface-3))] cursor-default"
                       >
                         {tag}
                       </Badge>
@@ -113,22 +113,22 @@ const PortfolioGrid = ({
         </div>
 
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-y-auto bg-[#2a2a2a] border-4 border-border shadow-none rounded-none">
+          <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-y-auto bg-[hsl(var(--surface-2))] border-4 border-border shadow-none rounded-none">
             {selectedProject && (
               <>
-                <DialogHeader className="bg-[#2a2a2a]">
-                  <DialogTitle className="text-2xl font-light font-satoshi text-gray-100">
+                <DialogHeader className="bg-[hsl(var(--surface-2))]">
+                  <DialogTitle className="text-2xl font-light font-satoshi text-[hsl(var(--text-primary))]">
                     {selectedProject.title}
                   </DialogTitle>
                   {type === "experience" && (
-                    <DialogDescription className="text-base text-gray-300">
+                    <DialogDescription className="text-base text-[hsl(var(--text-secondary))]">
                       {selectedProject.description}
                     </DialogDescription>
                   )}
                 </DialogHeader>
 
                 <div className="mt-6">
-                  <div className="rounded-md overflow-hidden mb-6 border border-gray-400">
+                  <div className="rounded-md overflow-hidden mb-6 border border-[hsl(var(--border))]">
                     <img
                       src={selectedProject.image}
                       alt={selectedProject.title}
@@ -166,10 +166,10 @@ const PortfolioGrid = ({
                     <div className="space-y-6">
                       {selectedProject.modalContent.overview && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Overview
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.modalContent.overview}
                           </p>
                         </div>
@@ -177,10 +177,10 @@ const PortfolioGrid = ({
 
                       {selectedProject.modalContent.process && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Process
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.modalContent.process}
                           </p>
                         </div>
@@ -188,10 +188,10 @@ const PortfolioGrid = ({
 
                       {selectedProject.modalContent.outcomes && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Outcomes
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.modalContent.outcomes}
                           </p>
                         </div>
@@ -199,10 +199,10 @@ const PortfolioGrid = ({
 
                       {selectedProject.modalContent.year && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Production year
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.modalContent.year}
                           </p>
                         </div>
@@ -212,10 +212,10 @@ const PortfolioGrid = ({
                     <div className="space-y-6">
                       {selectedProject.experience && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Experience
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.experience}
                           </p>
                         </div>
@@ -223,10 +223,10 @@ const PortfolioGrid = ({
 
                       {selectedProject.year && (
                         <div>
-                          <h3 className="text-lg font-light mb-2 font-satoshi text-gray-100">
+                          <h3 className="text-lg font-light mb-2 font-satoshi text-[hsl(var(--text-primary))]">
                             Year
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.year}
                           </p>
                         </div>
@@ -237,7 +237,7 @@ const PortfolioGrid = ({
                           <h3 className="text-lg font-medium mb-2 font-satoshi text-gray-100">
                             Outcomes
                           </h3>
-                          <p className="text-gray-300">
+                          <p className="text-[hsl(var(--text-secondary))]">
                             {selectedProject.outcomes}
                           </p>
                         </div>
@@ -247,7 +247,7 @@ const PortfolioGrid = ({
 
                   <div className="flex flex-wrap gap-2 mt-6">
                     {selectedProject.tags.map((tag, index) => (
-                      <Badge key={index} variant="outline" className="border-gray-500 text-gray-300">
+                      <Badge key={index} variant="outline" className="border-[hsl(var(--border))] text-[hsl(var(--text-secondary))]">
                         {tag}
                       </Badge>
                     ))}
@@ -266,14 +266,14 @@ const PortfolioGrid = ({
                                   className="basis-full"
                                 >
                                   <div className="p-2">
-                                    <div className="overflow-hidden rounded-md border border-gray-400">
+                                    <div className="overflow-hidden rounded-md border border-[hsl(var(--border))]">
                                       <img
                                         src={imageUrl}
                                         alt={`${selectedProject.title} - Image ${index + 1}`}
                                         className="w-full h-auto"
                                       />
                                     </div>
-                                    <p className="text-center text-gray-400 text-sm mt-2">{index + 1} / {selectedProject.additionalImages!.length}</p>
+                                    <p className="text-center text-[hsl(var(--text-muted))] text-sm mt-2">{index + 1} / {selectedProject.additionalImages!.length}</p>
                                   </div>
                                 </CarouselItem>
                               ),

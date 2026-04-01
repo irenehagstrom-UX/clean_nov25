@@ -82,13 +82,13 @@ const FloatingChatbot = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-7xl h-[90vh] bg-[#2a2a2a] border-4 border-border shadow-none rounded-2xl overflow-hidden flex flex-col"
+              className="relative w-full max-w-7xl h-[90vh] bg-[hsl(var(--surface-2))] border-4 border-border shadow-none rounded-2xl overflow-hidden flex flex-col"
               onClick={(e) => e.stopPropagation()}
               onWheel={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="flex-shrink-0 px-8 pt-6 pb-4 border-b border-gray-600">
-                <h2 className="text-2xl font-semibold text-gray-100">
+              <div className="flex-shrink-0 px-8 pt-6 pb-4 border-b border-[hsl(var(--border))]">
+                <h2 className="text-2xl font-semibold text-[hsl(var(--text-primary))]">
                   Ask my Avatar about me
                 </h2>
               </div>
@@ -96,9 +96,9 @@ const FloatingChatbot = () => {
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4 z-10 bg-[#3a3a3a] hover:bg-[#4a4a4a] rounded-full p-2 shadow-md transition-colors"
+                className="absolute top-4 right-4 z-10 bg-[hsl(var(--surface-3))] hover:bg-[hsl(var(--muted))] rounded-full p-2 shadow-md transition-colors"
               >
-                <X className="w-5 h-5 text-gray-300" />
+                <X className="w-5 h-5 text-[hsl(var(--text-secondary))]" />
               </button>
 
               {/* Chatbot Content */}
