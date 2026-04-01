@@ -472,7 +472,7 @@ const AboutMe = () => {
                       University of Skövde
                     </p>
                     <p className="text-xs text-white/80">
-                      Bachelor of Science in Product Development Engineering
+                      Bachelor of Science in Product Design Engineering
                     </p>
                     <p className="text-xs text-white/60">1996 - 1999</p>
                   </div>
@@ -491,7 +491,6 @@ const AboutMe = () => {
                     </p>
                     <p className="text-xs text-white/80">
                       Certified Professional for Requirements Engineering
-                      Foundation Level Course
                     </p>
                     <p className="text-xs text-white/60">Issued Jul 2012</p>
                   </div>

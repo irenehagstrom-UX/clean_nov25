@@ -387,7 +387,7 @@ const InteractiveChatbot = () => {
         lowerInput.includes("tangible"))
     ) {
       return {
-        text: "I have a Bachelor of Science in Product Development Engineering from the University of Skövde, Sweden. My 1999 thesis involved designing sustainable recycling bins for public spaces—hexagon-shaped bins inspired by beehives that use minimal material while providing maximum stability. 25 years later, similar designs can still be seen throughout Sweden! At Honeyants (2008-2010), I designed fashion products from concept through manufacturing. My product design approach considers sustainability, manufacturing constraints, user needs, aesthetics, and lifecycle. I understand CAD modeling, material properties, production processes, and how to balance design vision with practical constraints. This physical product background informs my digital product work—I think holistically about the entire product ecosystem.",
+        text: "I have a Bachelor of Science in Product Design Engineering from the University of Skövde, Sweden. My 1999 thesis involved designing sustainable recycling bins for public spaces—hexagon-shaped bins inspired by beehives that use minimal material while providing maximum stability. 25 years later, similar designs can still be seen throughout Sweden! At Honeyants (2008-2010), I designed fashion products from concept through manufacturing. My product design approach considers sustainability, manufacturing constraints, user needs, aesthetics, and lifecycle. I understand CAD modeling, material properties, production processes, and how to balance design vision with practical constraints. This physical product background informs my digital product work—I think holistically about the entire product ecosystem.",
         images: findImagesByKeywords("industrial product design fashion"),
       };
     }
@@ -592,7 +592,7 @@ const InteractiveChatbot = () => {
       lowerInput.includes("master")
     ) {
       return {
-        text: "I hold a Master of Interactive Multimedia from the University of Technology Sydney, Australia, and a Bachelor of Science in Product Development Engineering from the University of Skövde, Sweden. I'm also a Certified Professional for Requirements Engineering from Sophist GmbH, Berlin, and completed Mastering the Requirements Process from Software Education, Sydney. I also studied 3D CAD Modelling & Multimedia at Griffith University, Gold Coast, Australia.",
+        text: "I hold a Master of Interactive Multimedia from the University of Technology Sydney, Australia, and a Bachelor of Science in Product Design Engineering from the University of Skövde, Sweden. I'm also a Certified Professional for Requirements Engineering from Sophist GmbH, Berlin, and completed Mastering the Requirements Process from Software Education, Sydney. I also studied 3D CAD Modelling & Multimedia at Griffith University, Gold Coast, Australia.",
       };
     }
 

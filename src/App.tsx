@@ -20,7 +20,7 @@ function App() {
       id: "8",
       title: "Design Manager",
       image: "/images/PR_pm_thumb.png",
-      additionalImages: ["/images/PR-PM_workshop.jpg"],
+      additionalImages: [],
       tags: [
         "UX Strategy",
         "Design Leadership",
@@ -41,6 +41,7 @@ function App() {
       additionalImages: [
         "/images/PR_aiven_overview.png",
         "/images/PR_aiven_wireframes.png",
+        "/images/PR-PM_workshop.jpg",
         "/images/PR_ux_services.png",
         "/images/PR_aiven_CRDR.png",
       ],
@@ -366,7 +367,7 @@ function App() {
         process:
           "With inspiration from nature and beehives, we settled on the hexagon shape, which uses the least amount of material but maximum stability. Its shape also allows for different setups and has a unique and beautiful style compared to most bins.",
         outcomes:
-          "Even if this was only a thesis project, it caught ground. 25 years later similar recycling bins, from different producers, can still be seen throughout public spaces in Sweden. These photos were recently taken from a shopping center and Landvetter airport.",
+          "Even if this was only a thesis project, it caught ground. 25 years later similar recycling bins, from different producers, can still be seen throughout public spaces in Sweden, as can be seen on the photos, taken from a shopping center and Gothenburgs airport.",
         year: "1999, Stockholm Sweden",
       },
     },
