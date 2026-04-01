@@ -27,7 +27,7 @@ const Hero = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-[hsl(var(--surface-2))]/85 dark:bg-black/70 p-5 rounded-lg backdrop-blur-sm"
+          className="bg-[hsl(var(--surface-1))] p-[50px] rounded-lg"
         >
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-3 text-[hsl(var(--text-primary))] font-satoshi drop-shadow-lg">
             {name}
@@ -76,7 +76,7 @@ const Hero = ({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="relative bg-[hsl(var(--surface-3))]/80 rounded-2xl px-6 py-4 shadow-lg"
+                className="relative bg-[hsl(var(--surface-3))]/80 rounded-2xl px-[54px] py-[46px] shadow-lg"
               >
                 {/* Speech bubble tail pointing right */}
                 <div className="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[12px] border-l-[hsl(var(--surface-3)/0.8)]"></div>
