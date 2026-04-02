@@ -158,8 +158,8 @@ const AboutMe = () => {
                     Email me
                   </button>
                   <a
-                    href="/Irene Hagstroem_Profile.pdf"
-                    download="Irene Hagstroem_Profile.pdf"
+                    href="/IreneHagstroem_Profile.pdf"
+                    download="IreneHagstroem_Profile.pdf"
                     className="flex items-center gap-3 w-full text-left text-sm text-gray-700 hover:text-gray-900"
                   >
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">

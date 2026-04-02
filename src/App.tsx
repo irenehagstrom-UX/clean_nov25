@@ -543,8 +543,8 @@ function App() {
                   LinkedIn profile
                 </a>
                 <a
-                  href="/Irene Hagstroem_Profile.pdf"
-                  download="Irene Hagstroem_Profile.pdf"
+                  href="/IreneHagstroem_Profile.pdf"
+                  download="IreneHagstroem_Profile.pdf"
                   className="text-[hsl(var(--text-muted))] hover:text-primary transition-colors text-xs font-satoshi flex items-center gap-1"
                 >
                   <Download className="w-3 h-3" />

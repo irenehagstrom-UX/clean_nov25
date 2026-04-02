@@ -357,8 +357,8 @@ const News = ({ onBackClick }: NewsProps) => {
                   className="block w-full text-left text-sm hover:underline"
                   onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/Irene Hagstroem_Profile.pdf";
-                    link.download = "Irene Hagstroem_Profile.pdf";
+                    link.href = "/IreneHagstroem_Profile.pdf";
+                    link.download = "IreneHagstroem_Profile.pdf";
                     link.click();
                   }}
                 >
